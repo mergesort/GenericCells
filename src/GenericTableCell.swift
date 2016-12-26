@@ -80,3 +80,41 @@ private extension GenericTableCell {
         NSLayoutConstraint.activate(constraints.flatMap { $0 })
     }
 }
+
+
+public protocol ReusableView: class {}
+
+public extension ReusableView where Self: UIView {
+    
+    /// A default implementation for reuseIdentifier by using the class's describing function
+    public static var reuseIdentifier: String {
+        return String(describing: self)
+    }
+}
+
+extension UITableViewCell: ReusableView {}
+
+public extension UITableView {
+    
+    /// This method allows you to dequeue a UITableViewCell by providing it's class type instead 
+    /// of a reuseIdentifier. It capitalizes on a ReusableView's reuseIdentifier property, 
+    /// by using it in it's implementation.
+    ///
+    /// - Parameter indexPath: The indexPath to dequeue a UITableViewCell at.
+    /// - Returns: a UITableViewCell to be dequeued.
+    public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
+        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath as IndexPath) as? T else {
+            fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
+        }
+        
+        return cell
+    }
+    
+    /// This method allows you to register a UITableViewCell with a UITableView by providing it's 
+    /// class type instead of a reuseIdentifier.
+    ///
+    /// - Parameter _: The type of UITableViewCell to register
+    public func register<T: UITableViewCell>(_: T.Type) where T: ReusableView {
+        self.register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
+    }
+}
