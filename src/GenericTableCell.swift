@@ -7,8 +7,10 @@ public protocol ReusableGenericView {
 
 public final class GenericTableCell<CustomView>: UITableViewCell where CustomView: UIView, CustomView: ReusableGenericView {
 
+    /// This is your custom view, which you can access externall to customize your view.
     public let customView = CustomView()
 
+    /// You can optionally provide insets for your customView, if your design requires spacing.
     public var contentInsets = UIEdgeInsets() {
         didSet {
             self.customViewLeadingConstraint?.constant = self.contentInsets.left
@@ -37,6 +39,7 @@ public final class GenericTableCell<CustomView>: UITableViewCell where CustomVie
         self.setup()
     }
 
+    /// Note: This acts as a passthrough, so a CustomView that implements the ReusableGenericView can have it acted upon.
     public override func prepareForReuse() {
         super.prepareForReuse()
 
