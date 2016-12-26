@@ -33,10 +33,9 @@ public final class GenericTableCell<CustomView>: UITableViewCell where CustomVie
         self.setup()
     }
 
+    @available(*, unavailable)
     public required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-
-        self.setup()
+        fatalError("init(coder:) has not been implemented")
     }
 
     /// Note: This acts as a passthrough, so a CustomView that implements the ReusableGenericView can have it acted upon.
