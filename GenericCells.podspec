@@ -6,7 +6,7 @@ Pod::Spec.new do |spec|
   spec.authors =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
   spec.source_files = 'src/*.{swift}'
   spec.homepage = 'https://github.com/mergesort/GenericCells'
-  spec.source  = { :git => 'https://github.com/mergesort/GenericCells.git' }
+  spec.source  = { :git => 'https://github.com/mergesort/GenericCells.git', :tag => "#{spec.version}" }
 
   spec.ios.deployment_target = '9.0'
   spec.requires_arc = true
