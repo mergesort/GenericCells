@@ -1,10 +1,12 @@
 import UIKit
 
+/// A `UIView` subclass must implement this protocol it intends to be used in a `ReusableView`
 public protocol ReusableGenericView {
 
     func prepareForReuse()
 }
 
+/// A protocol that provides a default implementation for `reuseIdentifier`s.
 public protocol ReusableView: class {}
 
 public extension ReusableView where Self: UIView {
