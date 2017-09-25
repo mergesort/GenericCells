@@ -34,7 +34,7 @@ public extension UITableView {
     ///
     /// - Parameter indexPath: The indexPath to dequeue a UITableViewCell at.
     /// - Returns: a UITableViewCell to be dequeued.
-    public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
+    public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath as IndexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }
@@ -46,7 +46,7 @@ public extension UITableView {
     /// class type instead of a reuseIdentifier.
     ///
     /// - Parameter _: The type of UITableViewCell to register
-    public func register<T: UITableViewCell>(_: T.Type) where T: ReusableView {
+    public func register<T: UITableViewCell>(_: T.Type) {
         self.register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
     }
 }
@@ -61,7 +61,7 @@ public extension UICollectionView {
     ///
     /// - Parameter indexPath: The indexPath to dequeue a UICollectionViewCell at.
     /// - Returns: a UICollectionViewCell to be dequeued.
-    public func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
+    public func dequeueReusableCell<T: UICollectionViewCell>(forIndexPath indexPath: IndexPath) -> T {
         guard let cell = dequeueReusableCell(withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }
@@ -72,7 +72,7 @@ public extension UICollectionView {
     /// class type instead of a reuseIdentifier.
     ///
     /// - Parameter _: The type of UICollectionViewCell to register
-    public func register<T: UICollectionViewCell>(_: T.Type) where T: ReusableView {
+    public func register<T: UICollectionViewCell>(_: T.Type) {
         self.register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
     }
 }
