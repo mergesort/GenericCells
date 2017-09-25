@@ -4,7 +4,7 @@ Pod::Spec.new do |spec|
   spec.version = '1.2'
   spec.license = { :type => 'MIT' }
   spec.authors =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
-  spec.source_files = 'src/*.{swift}'
+  spec.source_files = 'Source/*.{swift}'
   spec.homepage = 'https://github.com/mergesort/GenericCells'
   spec.source  = { :git => 'https://github.com/mergesort/GenericCells.git', :tag => "#{spec.version}" }
 
