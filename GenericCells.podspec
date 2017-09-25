@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
   spec.name = 'GenericCells'
   spec.summary = 'Taking advantage of generics instead of subclassing for UITableViewCell and UICollectionViewCell.'
-  spec.version = '1.2'
+  spec.version = '1.2.1'
   spec.license = { :type => 'MIT' }
   spec.authors =  { 'Joe Fabisevich' => 'github@fabisevi.ch' }
   spec.source_files = 'Source/*.{swift}'
