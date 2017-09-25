@@ -28,7 +28,9 @@ private extension GenericCollectionCell {
     
     func setup() {
         self.contentView.addSubview(self.customView)
-
+        self.contentView.preservesSuperviewLayoutMargins = false
+        self.contentView.layoutMargins = .zero
+        
         self.setupConstraints()
     }
     
