@@ -1,5 +1,9 @@
 # Change Log
 
+# 1.2.1 (2017-09-25)
+
+- `contentView.preservesSuperviewLayoutMargins` defaults to false with `.layoutMargins` defaults to `.zero`, to have more consistent behavior with `UITableViewCell` and `UICollectionViewCell`.
+
 # 1.2 (2017-09-25)
 
 - Adding support for Swift 4.
