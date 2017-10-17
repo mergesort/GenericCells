@@ -48,7 +48,7 @@ cell.customView.titleLabel.text = "This library rules!"
 cell.customView.imageView.image = UIImage(named: "success")
 ```
 
-Extra credit, let's recycling support. Extend your view with the `ReusableGenericView` protocol:
+Extra credit, let's add recycling support. Extend your view with the `ReusableGenericView` protocol:
 
 ```swift
 extension MyView: ReusableGenericView {
