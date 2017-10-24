@@ -35,7 +35,6 @@ class ViewController: UIViewController {
         RowContent(title: "Famous Foxes", subtitle: "Fantastic Mr. Fox, Fox in Sox, That fox from the video \"What Does The Fox Say\", and more!", buttonTitle: "Don't like foxes?", buttonColor: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1)),
         RowContent(title: "Famous Groundhogs", subtitle: "Punxsutawney Phil, State Island Chuck, Sir Walter Walley, and more!", buttonTitle: "Don't like groundhogs?", buttonColor: #colorLiteral(red: 0.7254902124, green: 0.4784313738, blue: 0.09803921729, alpha: 1)),
         RowContent(title: "Famous Lions", subtitle: "Mufasa, Mayor Lionheart, Scar, and more!", buttonTitle: "Don't like lions?", buttonColor: #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)),
-//        RowContent(title: <#T##String#>, subtitle: <#T##String#>, buttonTitle: <#T##String#>, buttonColor: <#T##UIColor#>),
     ]
 
 }
