@@ -74,7 +74,7 @@ use_frameworks!
 pod 'GenericCells'
 ```
 
-Or install it manually by downloading `GenericTableCell.swift`, `GenericCollectionCell.swift`, and `ReusableView.swift`, and dropping it in your project.
+Or install it manually by downloading `GenericTableCell.swift`, `GenericCollectionCell.swift`, `GenericCollectionReusableView.swift`, and `ReusableView.swift`, and dropping it in your project.
 
 ## About me
 

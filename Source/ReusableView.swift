@@ -51,9 +51,25 @@ public extension UITableView {
     }
 }
 
-extension UICollectionViewCell: ReusableView {}
+extension UICollectionReusableView: ReusableView {}
 
 public extension UICollectionView {
+    
+    /// The types of supplementary views that may be registered
+    public enum ElementKind : String {
+        /// Rendered in the collection view as a section header
+        case sectionHeader
+        /// Rendered in the collection view as a section footer
+        case sectionFooter
+        
+        public var rawValue: String {
+            // For real though why isn't this a Swift enum yet
+            switch self {
+            case .sectionHeader: return UICollectionElementKindSectionHeader
+            case .sectionFooter: return UICollectionElementKindSectionFooter
+            }
+        }
+    }
     
     /// This method allows you to dequeue a UICollectionViewCell by providing it's class type instead
     /// of a reuseIdentifier. It capitalizes on a ReusableView's reuseIdentifier property,
@@ -74,5 +90,28 @@ public extension UICollectionView {
     /// - Parameter _: The type of UICollectionViewCell to register
     public func register<T: UICollectionViewCell>(_: T.Type) {
         self.register(T.self, forCellWithReuseIdentifier: T.reuseIdentifier)
+    }
+    
+    /// This method allows you to dequeue a UICollectionReusableView by providing it's class type instead
+    /// of a reuseIdentifier. It capitalizes on a ReusableView's reuseIdentifier property,
+    /// by using it in it's implementation.
+    ///
+    /// - Parameter kind: The kind of supplementary view (header or footer)
+    /// - Parameter indexPath: The indexPath to dequeue a UICollectionViewCell at.
+    /// - Returns: a UICollectionReusableView to be dequeued.
+    public func dequeueReusableSupplementaryView<T: UICollectionReusableView>(ofKind kind: ElementKind, for indexPath: IndexPath) -> T {
+        guard let view = dequeueReusableSupplementaryView(ofKind: kind.rawValue, withReuseIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Could not dequeue supplementary view with identifier: \(T.reuseIdentifier)")
+        }
+        return view
+    }
+    
+    /// This method allows you to register a UICollectionReusableView with a UICollectionView by providing it's
+    /// class type instead of a reuseIdentifier.
+    ///
+    /// - Parameter _: The type of UICollectionReusableView to register
+    /// - Parameter kind: The kind of supplementary view (header or footer)
+    public func register<T: UICollectionReusableView>(_: T.Type, forSupplementaryViewOfKind kind: ElementKind) {
+        self.register(T.self, forSupplementaryViewOfKind: kind.rawValue, withReuseIdentifier: T.reuseIdentifier)
     }
 }
