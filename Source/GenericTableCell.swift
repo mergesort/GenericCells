@@ -5,7 +5,7 @@ public final class GenericTableCell<CustomView>: UITableViewCell where CustomVie
     /// This is your custom view, which you can access external to customize your view.
     public let customView = CustomView()
 
-    public override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
 
         self.setup()
