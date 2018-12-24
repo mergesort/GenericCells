@@ -2,6 +2,11 @@
 
 #### Creating UITableViewCell and UICollectionViewCell subclasses is so Swift 2 point zero.
 
+[![Pod Version](https://img.shields.io/badge/Pod-1.3-6193DF.svg)](https://cocoapods.org/)
+![Swift Version](https://img.shields.io/badge/Swift-4.2-brightgreen.svg)
+![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg) 
+![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
+
 ---
 
 Introducing, GenericCells!… Capitalizing on Swift's generics, we can get all the benefits of a custom UITableViewCell or UICollectionViewCell class, without the hassle of a new class for each of them.
