@@ -12,7 +12,7 @@ final class CustomView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 1
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.headline)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.headline)
         
         return label
     }()
@@ -20,7 +20,7 @@ final class CustomView: UIView {
     let subtitleLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
-        label.font = UIFont.preferredFont(forTextStyle: UIFontTextStyle.body)
+        label.font = UIFont.preferredFont(forTextStyle: UIFont.TextStyle.body)
         
         return label
     }()

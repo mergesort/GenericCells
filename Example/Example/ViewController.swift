@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     private let tableView: UITableView = {
         let tableView = UITableView()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 76.0
         tableView.register(GenericTableCell<CustomView>.self)
         tableView.tableFooterView = UIView()
