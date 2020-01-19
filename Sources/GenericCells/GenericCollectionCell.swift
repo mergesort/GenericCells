@@ -1,12 +1,12 @@
 import UIKit
 
-public final class GenericTableCell<CustomView>: UITableViewCell where CustomView: UIView, CustomView: ReusableGenericView {
+public final class GenericCollectionCell<CustomView>: UICollectionViewCell where CustomView: UIView, CustomView: ReusableGenericView {
 
     /// This is your custom view, which you can access external to customize your view.
     public let customView = CustomView()
 
-    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
 
         self.setup()
     }
@@ -22,9 +22,10 @@ public final class GenericTableCell<CustomView>: UITableViewCell where CustomVie
 
         self.customView.prepareForReuse()
     }
+
 }
 
-private extension GenericTableCell {
+private extension GenericCollectionCell {
 
     func setup() {
         self.contentView.addSubview(self.customView)
@@ -43,7 +44,8 @@ private extension GenericTableCell {
             self.customView.topAnchor.constraint(equalTo: self.contentView.layoutMarginsGuide.topAnchor),
             self.customView.bottomAnchor.constraint(equalTo: self.contentView.layoutMarginsGuide.bottomAnchor)
         ]
-        
+
         NSLayoutConstraint.activate(constraints)
     }
+
 }
