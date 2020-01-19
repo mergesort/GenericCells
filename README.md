@@ -2,8 +2,8 @@
 
 #### Creating UITableViewCell and UICollectionViewCell subclasses is so Swift 2 point zero.
 
-[![Pod Version](https://img.shields.io/badge/Pod-1.3-6193DF.svg)](https://cocoapods.org/)
-![Swift Version](https://img.shields.io/badge/Swift-4.2-brightgreen.svg)
+[![Pod Version](https://img.shields.io/badge/Pod-1.4.0-6193DF.svg)](https://cocoapods.org/)
+![Swift Version](https://img.shields.io/badge/Swift-5.1-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg) 
 ![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
 
@@ -70,7 +70,10 @@ extension MyView: ReusableGenericView {
 And it will get called when the cell is recycled.
 
 ## Installation
-You can use [CocoaPods](http://cocoapods.org/) to install `GenericCells` by adding it to your `Podfile`:
+
+You can use [SPM](https://swift.org/package-manager/) to install `GenericCells`.
+
+You can also use [CocoaPods](http://cocoapods.org/) to install `GenericCells` by adding it to your `Podfile`:
 
 ```swift
 platform :ios, '9.0'
