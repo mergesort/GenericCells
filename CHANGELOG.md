@@ -1,5 +1,10 @@
 # Change Log
 
+# 1.4.0 (2020-01-19)
+
+- Adding Swift 5.1 support.
+- Adding SPM support.
+
 # 1.3 (2018-12-24)
 
 - Adding Swift 4.2 support.
