@@ -12,10 +12,10 @@
 		B7BBD3F71F79273300CE3176 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD3F51F79273300CE3176 /* Main.storyboard */; };
 		B7BBD3F91F79273300CE3176 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD3F81F79273300CE3176 /* Assets.xcassets */; };
 		B7BBD3FC1F79273300CE3176 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7BBD3FA1F79273300CE3176 /* LaunchScreen.storyboard */; };
-		B7BBD4071F79278D00CE3176 /* GenericCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD4041F79278000CE3176 /* GenericCollectionCell.swift */; };
-		B7BBD4081F79279000CE3176 /* GenericTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD4051F79278000CE3176 /* GenericTableCell.swift */; };
-		B7BBD4091F79279000CE3176 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD4061F79278000CE3176 /* ReusableView.swift */; };
 		B7BBD40B1F7927D200CE3176 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BBD40A1F7927D200CE3176 /* CustomView.swift */; };
+		B7BC3CD723D503C8008BFF18 /* GenericCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC3CD423D503C8008BFF18 /* GenericCollectionCell.swift */; };
+		B7BC3CD823D503C8008BFF18 /* GenericTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC3CD523D503C8008BFF18 /* GenericTableCell.swift */; };
+		B7BC3CD923D503C8008BFF18 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BC3CD623D503C8008BFF18 /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +26,10 @@
 		B7BBD3F81F79273300CE3176 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7BBD3FB1F79273300CE3176 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7BBD3FD1F79273300CE3176 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7BBD4041F79278000CE3176 /* GenericCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCollectionCell.swift; sourceTree = "<group>"; };
-		B7BBD4051F79278000CE3176 /* GenericTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTableCell.swift; sourceTree = "<group>"; };
-		B7BBD4061F79278000CE3176 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		B7BBD40A1F7927D200CE3176 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		B7BC3CD423D503C8008BFF18 /* GenericCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCollectionCell.swift; sourceTree = "<group>"; };
+		B7BC3CD523D503C8008BFF18 /* GenericTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableCell.swift; sourceTree = "<group>"; };
+		B7BC3CD623D503C8008BFF18 /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 		B7BBD3F01F79273300CE3176 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				B7BBD4031F79278000CE3176 /* Source */,
+				B7BC3CD223D503C8008BFF18 /* Sources */,
 				B7BBD3F11F79273300CE3176 /* AppDelegate.swift */,
 				B7BBD3F31F79273300CE3176 /* ViewController.swift */,
 				B7BBD40A1F7927D200CE3176 /* CustomView.swift */,
@@ -74,15 +74,23 @@
 			path = Example;
 			sourceTree = "<group>";
 		};
-		B7BBD4031F79278000CE3176 /* Source */ = {
+		B7BC3CD223D503C8008BFF18 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				B7BBD4041F79278000CE3176 /* GenericCollectionCell.swift */,
-				B7BBD4051F79278000CE3176 /* GenericTableCell.swift */,
-				B7BBD4061F79278000CE3176 /* ReusableView.swift */,
+				B7BC3CD323D503C8008BFF18 /* GenericCells */,
 			);
-			name = Source;
-			path = ../../Source;
+			name = Sources;
+			path = ../../Sources;
+			sourceTree = "<group>";
+		};
+		B7BC3CD323D503C8008BFF18 /* GenericCells */ = {
+			isa = PBXGroup;
+			children = (
+				B7BC3CD423D503C8008BFF18 /* GenericCollectionCell.swift */,
+				B7BC3CD523D503C8008BFF18 /* GenericTableCell.swift */,
+				B7BC3CD623D503C8008BFF18 /* ReusableView.swift */,
+			);
+			path = GenericCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,7 +125,7 @@
 				TargetAttributes = {
 					B7BBD3ED1F79273300CE3176 = {
 						CreatedOnToolsVersion = 9.0;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -158,12 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7BC3CD823D503C8008BFF18 /* GenericTableCell.swift in Sources */,
 				B7BBD3F41F79273300CE3176 /* ViewController.swift in Sources */,
-				B7BBD4091F79279000CE3176 /* ReusableView.swift in Sources */,
 				B7BBD3F21F79273300CE3176 /* AppDelegate.swift in Sources */,
+				B7BC3CD923D503C8008BFF18 /* ReusableView.swift in Sources */,
 				B7BBD40B1F7927D200CE3176 /* CustomView.swift in Sources */,
-				B7BBD4081F79279000CE3176 /* GenericTableCell.swift in Sources */,
-				B7BBD4071F79278D00CE3176 /* GenericCollectionCell.swift in Sources */,
+				B7BC3CD723D503C8008BFF18 /* GenericCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +318,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -325,7 +333,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

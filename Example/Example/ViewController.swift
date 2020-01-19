@@ -1,7 +1,6 @@
 import UIKit
 
 private struct RowContent {
-
     let title: String
     let subtitle: String
     let buttonTitle: String
@@ -19,7 +18,6 @@ class ViewController: UIViewController {
 
         return tableView
     }()
-
     
     // MARK: Lifecycle
     
@@ -40,7 +38,7 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
- 
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let currentRowContent = self.rowContents[indexPath.row]
@@ -49,15 +47,15 @@ extension ViewController: UITableViewDelegate {
         alertController.addAction(UIAlertAction(title: "Maybe later", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
+
 }
 
-
 extension ViewController: UITableViewDataSource {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.rowContents.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as GenericTableCell<CustomView>
 
@@ -69,17 +67,17 @@ extension ViewController: UITableViewDataSource {
         cell.customView.actionButton.setTitleColor(UIColor.white, for: .normal)
         cell.customView.actionButton.backgroundColor = currentRowContent.buttonColor
         cell.customView.actionButton.addTarget(self, action: #selector(showAngryWarning), for: .touchUpInside)
-        
+
         return cell
     }
-    
+
 }
 
 private extension ViewController {
-    
+
     func setup() {
         self.title = "Famous Animals"
-        
+
         self.view.addSubview(self.tableView)
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -100,6 +98,6 @@ private extension ViewController {
         alertController.addAction(UIAlertAction(title: "Goodbye", style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
-    
+
 }
 
