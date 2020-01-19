@@ -2,7 +2,7 @@
 
 #### Creating UITableViewCell and UICollectionViewCell subclasses is so Swift 2 point zero.
 
-[![Pod Version](https://img.shields.io/badge/Pod-1.4.0-6193DF.svg)](https://cocoapods.org/)
+[![Pod Version](https://img.shields.io/badge/Pod-1.4.1-6193DF.svg)](https://cocoapods.org/)
 ![Swift Version](https://img.shields.io/badge/Swift-5.1-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/License-MIT-lightgrey.svg) 
 ![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)
